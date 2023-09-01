@@ -1,0 +1,69 @@
+version: "3.1"
+
+forms:
+  patient_form:
+    required_slots:
+      - name
+      - date_of_birth
+      - medical_complaint
+      - mobile_number
+
+entities:
+  - name
+  - date_of_birth
+  - medical_complaint
+  - mobile_number
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  date_of_birth:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: date_of_birth
+  medical_complaint:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: medical_complaint
+  mobile_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: mobile_number
+
+# capture insurance name,ID; address; contact information* (validate contact number)
+responses:
+  utter_ask_name:
+    - text: "Can you specify your full name?"
+  utter_ask_date_of_birth:
+    - text: "What is your date of birth?"
+  utter_ask_medical_complaint:
+    - text: "What is the reason for your call?"
+  utter_ask_mobile_number:
+    - text: "What is the best number to reach you at?"
+  utter_submit:
+    - text: "Success"
+  utter_slots_values:
+    - custom:
+        name: "{name}"
+        date_of_birth: "{date_of_birth}"
+        medical_complaint: "{medical_complaint}"
+        contact_number: "{mobile_number}"
+
+  utter_please_rephrase:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  
+  utter_default:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+intents:
+  - request_doctor
+  - inform
+
+# actions:
+#   - validate_patient_form

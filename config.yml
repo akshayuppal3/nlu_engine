@@ -1,0 +1,20 @@
+recipe: default.v1
+language: en
+assistant_id: patient_bot
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier # classify and extract entities
+  epochs: 100
+- name: FallbackClassifier # handle unknown intents in the call
+  threshold: 0.7
+  # ambiguity_threshold: 0.1
+
+policies:
+  - name : RulePolicy
+
+logging:
+  level: DEBUG

@@ -1,0 +1,19 @@
+rules:
+  - rule: activate patient form
+    steps:
+      - intent: request_doctor
+      - action: patient_form
+      - active_loop: patient_form
+    
+  - rule: submit_form
+    condition: 
+    - active_loop: patient_form
+    steps:
+      - action: patient_form
+      - active_loop: null
+      - action: utter_submit
+      - action: utter_slots_values
+  - rule: Ask the user to rephrase in case of low NLU confidence
+    steps:
+    - intent: nlu_fallback
+    - action: utter_please_rephrase

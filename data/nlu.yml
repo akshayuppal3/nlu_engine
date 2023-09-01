@@ -1,0 +1,159 @@
+version: "3.1"
+nlu:
+- intent: request_doctor
+  examples: |
+    - I would like to schedule an appointment with a doctor.
+    - Can you help me book an appointment to see a doctor?
+    - How can I schedule a visit with a physician?
+    - I like to see a doctor
+    - Would love to see a doctor
+    - Can I see a doctor.
+    - I wanna see Physician.
+    - Fix an appointment for Doctor.
+    - Is it possible to set up an appointment to consult a doctor?
+    - I need to see a doctor. Can you arrange an appointment?
+    - Booking an appointment with a doctor is my priority.
+
+- intent: inform
+  examples: |
+    - my name is [Jon Wang](name).
+    - my name is [Akshay Uppal](name).
+    - I go by [Jeffery Liu](name).
+    - plase call me [Jeffery Liu](name).
+    - name is [Jonh Hancock](name).
+    - [Jon Wang](name).
+    - [Akshay Uppal](name).
+    - [Sasha grey](name).
+    - [Jeff Blum](name).
+    - [Johnny Depp](name).
+    - [Harvey Dent](name).
+    - [Emma Stone](name).
+    - [Bruce Lee](name).
+    - I go by [Jeffrey Liu](name).
+    - my name is [Akshay Uppal](name).
+    - Name is [Alice Dent](name).
+    - name is [clemantine roger](name).
+    - You can call me [michael adams](name).
+    - my date of birth is [January 15th, 1990](date_of_birth).
+    - my date of birth is [7th april 1991](date_of_birth)
+    - I'm celebrating my birthday on [August 8, 1995](date_of_birth).
+    - [April 9, 1934](date_of_birth).
+    - Born on [10th of June, 1982](date_of_birth).
+    - [13th april 1991](date_of_birth)
+    - [1992 7th april](date_of_birth)
+    - [1992 16th april](date_of_birth).
+    - [June 1 1921](date_of_birth).
+    - [March 14 1976](date_of_birth)
+    - [Februray 10 1976](date_of_birth)
+    - [13th april 1991](date_of_birth)
+    - [1992 7th april](date_of_birth)
+    - [1992 16th april](date_of_birth)
+    - [June 1 1921](date_of_birth)
+    - [March 14 1976](date_of_birth)
+    - [Februray 10 1976](date_of_birth)
+    - [2021, 1, March, 22, nd](date_of_birth)
+    - [Sept 22, 1967](date_of_birth)
+    - [12 August 1992](date_of_birth)
+    - [25th, December, 2020](date_of_birth)
+    - [14th April, 1990](date_of_birth)
+    - [October, 3, 1975](date_of_birth)
+    - [5th, June, 1985](date_of_birth)
+    - [1911, 1988](date_of_birth)
+    - [1995, October, 12](date_of_birth)
+    - [Jan 20th 2005](date_of_birth)
+    - [22nd July 1990](date_of_birth)
+    - [12, April, 1975](date_of_birth)
+    - [22 0ct, 67](date_of_birth)
+    - [1st June 85](date_of_birth)
+    - [1977, May, 92](date_of_birth)
+    - [31st, 10, 2001](date_of_birth)
+    - [2015, 7, 97](date_of_birth)
+    - [2002, June 1](date_of_birth)
+    - [Mar 23, 92](date_of_birth)
+    - My mobile number is [1234567890](mobile_number).
+    - My mobile number is [123 456 7890](mobile_number).
+    - Contact me at [9876543210](mobile_number).
+    - You can reach me at [5551234567](mobile_number).
+    - You can reach me at [555 123 4567](mobile_number).
+    - Call me at [one two three four five six seven eight nine zero](mobile_number).
+    - My number is [nine eight seven six five four three two one zero](mobile_number).
+    - Reach out to me at [5 5 5 1 2 3 4 5 6 7](mobile_number).
+    - My contact is [1 2 3 4 5 6 7 8 9 0](mobile_number).
+    - Dial [5551234567](mobile_number) to contact me.  
+    - [3126734562](mobile_number)
+    - [213 672 8871](mobile_number)
+    - [456 123 1234](mobile_number)
+    - [213 343 1234](mobile_number)
+    - [672-850-3175](mobile_number)
+    - [987.123.4567](mobile_number)
+    - [555-555-5555](mobile_number)
+    - [123-456-7890](mobile_number)
+    - [555-987654](mobile_number)
+    - [45.67898732](mobile_number)
+    - [555-123-4567](mobile_number)
+    - [4.5678.9873.2](mobile_number)
+    - [123 987 6543](mobile_number)
+    - [4 5 6 7 8 9 8 7 3 2](mobile_number)
+    - [456 7 89 8 7 3 2](mobile_number)
+    - [987654-9876](mobile_number)
+    - [555-123456](mobile_number)
+    - [4 5 6 7 8 9 8 7 3 2](mobile_number)
+    - I'm experiencing [chest pain](medical_complaint) and [shortness of breath](medical_complaint).
+    - My throat has been [sore](medical_complaint) for the past few days.
+    - I have a persistent [cough](medical_complaint) and [fever](medical_complaint).
+    - I twisted my [ankle](medical_complaint) and it's [swollen](medical_complaint).
+    - I have [stomach pain](medical_complaint).
+    - [muscle cramps](medical_complaint).
+    - I'm having [trouble breathing](medical_complaint).
+    - I [can't move](medical_complaint).
+    - I'm having a [stroke](medical_complaint).
+    - I'm feeling [sick](medical_complaint)
+    - suffering from severe [burns](medical_complaint).
+    - I have been coughing(medical_complaint) and sneezing(medical_complaint) all day.
+    - [trouble breathing](medical_complaint).
+    - I feel sad and [depressed](medical_complaint).
+    - [drowzy](medical_complaint) and sleepy(medical_complaint).
+    - having a hard time [breathing][medical_complaint].
+    - [regular checkup](medical_complaint).
+    - quite a [high fever](medical_complaint).
+    - I think my [leg is hurting](medical_complaint).
+    - I am runnny nose(medical_complaint).
+    - My [stomach](medical_complaint) hurts and I feel [nauseous](medical_complaint).
+    - I've been having [headaches](medical_complaint) and [dizziness](medical_complaint).
+    - There's a [rash](medical_complaint) on my arm that's [itching](medical_complaint).
+    - My [throat](medical_complaint) feels very [scratchy](medical_complaint) and uncomfortable.
+    - I'm experiencing a persistent [cough](medical_complaint) and [congestion](medical_complaint).
+    - I accidentally [twisted](medical_complaint) my [ankle](medical_complaint), and now it's [painful](medical_complaint) and [swollen](medical_complaint).
+    - I've been having [sharp](medical_complaint) [stomach pain](medical_complaint) for a while.
+    - I've been dealing with [persistent](medical_complaint) [muscle cramps](medical_complaint) in my legs.
+    - Lately, I've been having [difficulty](medical_complaint) [breathing](medical_complaint).
+    - I injured my [back](medical_complaint), and now I [cannot move](medical_complaint) without pain.
+    - My [head](medical_complaint) is pounding with an unbearable [headache](medical_complaint).
+    - I woke up with a [runny nose](medical_complaint) and [constant sneezing](medical_complaint).
+    - My [ear](medical_complaint) has been hurting, and there's some [discharge](medical_complaint).
+    - After lifting heavy objects, I'm experiencing severe [back pain](medical_complaint).
+    - I've been feeling [extremely dizzy](medical_complaint) and lightheaded.
+    - My [tooth](medical_complaint) started [throbbing](medical_complaint) with pain.
+    - I noticed a [red, itchy rash](medical_complaint) on my skin.
+    - Lately, I've been struggling with [persistent fatigue](medical_complaint) and [muscle weakness](medical_complaint).
+    - I have [persistent nausea](medical_complaint) and occasional [vomiting](medical_complaint).
+    - My left [eye](medical_complaint) is red, itchy, and [teary](medical_complaint).
+    - I woke up with [intense joint pain](medical_complaint) and stiffness.
+    - My [nose](medical_complaint) is completely [blocked](medical_complaint), and I can't breathe through it.
+    - I've been experiencing [frequent diarrhea](medical_complaint) and severe abdominal pain.
+    - My [sore throat](medical_complaint) is making it difficult to [swallow](medical_complaint).
+    - I've been having [persistent chest discomfort](medical_complaint) and occasional palpitations.
+    - My [wrist](medical_complaint) is [painfully swollen](medical_complaint) after a fall.
+    - I developed a [wet cough with green phlegm](medical_complaint) and chest congestion.
+    - I'm experiencing [persistent numbness](medical_complaint) and tingling in my fingers.
+    - My [vision](medical_complaint) has become [blurry](medical_complaint), and I see [flashing lights](medical_complaint).
+    - My [knee](medical_complaint) is suddenly [swollen](medical_complaint), and I can't [bend](medical_complaint) it properly.
+    - I woke up with a [high fever](medical_complaint) and uncontrollable [chills](medical_complaint).
+    - I have a [burning sensation](medical_complaint) and [frequent urge](medical_complaint) to urinate.
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - What is the tallest building
